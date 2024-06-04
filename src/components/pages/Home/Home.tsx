@@ -3,24 +3,18 @@ import Image from "next/image";
 import ahsan from "@/assets/images/NoamChomsky.jpg";
 import Link from "next/link";
 import MobileMenu from "@/components/shared/Navbar/MobileMenu";
+import Footer from "@/components/shared/Footer/Footer";
+import HomeNavbar from "@/components/shared/Navbar/HomeNavbar";
 
 const HomePageComponent = () => {
   return (
-    <div className="max-w-4xl mx-auto px-4 min-h-screen">
+    <div className="max-w-4xl mx-auto px-4 py-2">
       {/* header */}
-      <div className="text-center">
-        <h1 className="lg:text-5xl md:text-4xl text-3xl font-bold my-3 text-center font-serif">
-          Professor Abdullah Ahsan
-        </h1>
-        <Separator className="bg-black lg:max-w-xl md:max-w-md max-w-sm px-10  mx-auto " />
-        <h5 className="lg:text-xl text-md font-semibold uppercase mt-3 tracking-widest ">
-          THE Professor Abdullah Ahsan WEBSITE
-        </h5>
-      </div>
+      <HomeNavbar />
       {/* mobile menu */}
       <MobileMenu />
 
-      <div className="flex justify-center items-center mt-10 gap-10 ">
+      <div className="flex justify-center items-center lg:mt-20 mt-16 gap-10 ">
         <div className="flex-1 hidden lg:flex md:flex flex-col items-end">
           <Link
             href="/books"
@@ -91,12 +85,7 @@ const HomePageComponent = () => {
       </div>
 
       {/* footer */}
-      <div className="text-center mt-20">
-        <h1 className="lg:text-3xl md:text-3xl text-2xl  font-bold my-3 text-center font-serif">
-          Professor Abdullah Ahsan
-        </h1>
-        <Separator className="bg-black lg:max-w-md md:max-w-sm max-w-xs px-10  mx-auto " />
-      </div>
+      <Footer />
     </div>
   );
 };

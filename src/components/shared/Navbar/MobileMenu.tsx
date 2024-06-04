@@ -1,12 +1,12 @@
 "use client";
 
-import { Menu, PlusIcon, X } from "lucide-react";
+import { PlusIcon, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
 const navItem = (
   <>
-    <div className="lg:hidden md:hidden flex flex-col bg-gray-300  text-center rounded-lg mobileMenu">
+    <div className="lg:hidden md:hidden flex flex-col bg-gray-300  text-center rounded-lg">
       <Link
         href="/"
         className="lg:text-xl text-md font-semibold uppercase py-2 border-b border-gray-500 hover:border-white hover:text-white hover:bg-gray-500 rounded-t-lg"
@@ -57,13 +57,13 @@ const navItem = (
       </Link>
 
       <Link
-        href="/debets"
+        href="/debates"
         className="lg:text-xl text-md font-semibold uppercase py-2 border-b border-gray-500 hover:border-white hover:text-white hover:bg-gray-500 "
       >
         DEBATES
       </Link>
       <Link
-        href="letters"
+        href="/letters"
         className="lg:text-xl text-md font-semibold uppercase py-2 rounded-b-lg hover:text-white hover:bg-gray-500 "
       >
         LETTERS
