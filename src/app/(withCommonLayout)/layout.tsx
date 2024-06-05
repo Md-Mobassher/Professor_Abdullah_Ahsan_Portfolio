@@ -14,7 +14,7 @@ export default function CommonLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="max-w-4xl mx-auto px-3">
+    <div className="max-w-5xl mx-auto px-4">
       <Navbar />
       <Separator className="bg-gray-500 mb-5" />
       {children}
