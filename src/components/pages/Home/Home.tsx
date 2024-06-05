@@ -1,10 +1,9 @@
-import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
-import ahsan from "@/assets/images/NoamChomsky.jpg";
 import Link from "next/link";
 import MobileMenu from "@/components/shared/Navbar/MobileMenu";
 import Footer from "@/components/shared/Footer/Footer";
 import HomeNavbar from "@/components/shared/Navbar/HomeNavbar";
+import ahsan from "@/assets/images/Abdullah-Ahsan.png";
 
 const HomePageComponent = () => {
   return (
@@ -14,7 +13,7 @@ const HomePageComponent = () => {
       {/* mobile menu */}
       <MobileMenu />
 
-      <div className="flex justify-center items-center lg:mt-20 mt-16 gap-10 ">
+      <div className="flex justify-center items-center lg:mt-14 mt-10 gap-10 ">
         <div className="flex-1 hidden lg:flex md:flex flex-col items-end">
           <Link
             href="/books"
@@ -52,7 +51,15 @@ const HomePageComponent = () => {
                 Recent Update
               </Link>
             </div>
-            <Image src={ahsan} alt="Abdullah Ahsan" />
+            <div>
+              <Image
+                src={ahsan}
+                alt="Abdullah Ahsan"
+                className=" object-cover filter grayscale transition duration-500 ease-in-out p-1 hover:grayscale-0  border-4 border-gray-400 hover:border-black"
+                width={300}
+                height={400}
+              />
+            </div>
           </div>
         </div>
 

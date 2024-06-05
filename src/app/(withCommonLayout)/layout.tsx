@@ -4,8 +4,8 @@ import { Separator } from "@/components/ui/separator";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Professor Abdullah Ahsan Website",
-  description: "Professor Abdullah Ahsan Website",
+  title: "Professor Abdullah Al-Ahsan Website",
+  description: "Professor Abdullah Al-Ahsan Website",
 };
 
 export default function CommonLayout({
@@ -16,7 +16,7 @@ export default function CommonLayout({
   return (
     <div className="max-w-4xl mx-auto px-3">
       <Navbar />
-      <Separator className="bg-black mb-5" />
+      <Separator className="bg-gray-500 mb-5" />
       {children}
       <Footer />
     </div>
