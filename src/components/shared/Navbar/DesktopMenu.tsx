@@ -16,12 +16,12 @@ const navItem = (
       ABOUT
     </Link>
 
-    <Link
+    {/* <Link
       href="/recent-update"
       className="lg:text-xl text-md font-semibold uppercase py-2 px-4 hover:text-white hover:bg-gray-500 rounded-lg"
     >
       Recent Update
-    </Link>
+    </Link> */}
 
     <Link
       href="/books"
@@ -67,7 +67,7 @@ const navItem = (
 );
 const DesktopMenu = () => {
   return (
-    <div className="lg:flex md:flex flex-wrap hidden   text-center justify-center items rounded-lg mt-3">
+    <div className="lg:flex md:flex flex-wrap hidden   text-center justify-center items rounded-lg">
       {navItem}
     </div>
   );

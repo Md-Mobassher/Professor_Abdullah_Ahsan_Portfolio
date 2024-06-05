@@ -21,12 +21,12 @@ const navItem = (
         ABOUT
       </Link>
 
-      <Link
+      {/* <Link
         href="/recent-update"
         className="lg:text-xl text-md font-semibold uppercase py-2 border-b border-gray-500  hover:text-white hover:bg-gray-500 "
       >
         Recent Update
-      </Link>
+      </Link> */}
 
       <Link
         href="/books"
@@ -77,7 +77,7 @@ const MobileMenu = () => {
   return (
     <div>
       {/* Mobile Menu Button (visible on small screens) */}
-      <div className=" flex md:hidden p-2 relative justify-center items-center">
+      <div className=" flex md:hidden px-2 relative justify-center items-center">
         <button
           onClick={() => setIsOpen(!isOpen)}
           type="button"
@@ -98,7 +98,7 @@ const MobileMenu = () => {
             </div>
           )}
           {isOpen && (
-            <div className="flex flex-col pt-5 w-full top-8 right-0 left-0 shadow-lg rounded-md absolute transition-all duration-500">
+            <div className="flex flex-col pt-5 w-full top-8 right-0 left-0 shadow-lg rounded-md absolute transition-all duration-500 z-50">
               {navItem}
             </div>
           )}

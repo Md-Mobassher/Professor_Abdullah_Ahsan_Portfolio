@@ -43,14 +43,14 @@ const HomePageComponent = () => {
 
         <div className="flex-1">
           <div className="flex  flex-col justify-center items-center">
-            <div className="hidden lg:flex md:flex">
+            {/* <div className="hidden lg:flex md:flex">
               <Link
                 href="/recent-update"
                 className="lg:text-xl text-md font-semibold uppercase mb-3"
               >
                 Recent Update
               </Link>
-            </div>
+            </div> */}
             <div>
               <Image
                 src={ahsan}
