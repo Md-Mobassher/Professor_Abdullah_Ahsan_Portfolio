@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className="text-center mb-2">
       <Link href="/">
-        <h1 className="lg:text-5xl md:text-4xl text-3xl font-bold my-2 text-center font-serif">
+        <h1 className="lg:text-5xl md:text-4xl text-3xl font-bold my-3 text-center font-serif">
           Professor Abdullah Al-Ahsan
         </h1>
       </Link>
