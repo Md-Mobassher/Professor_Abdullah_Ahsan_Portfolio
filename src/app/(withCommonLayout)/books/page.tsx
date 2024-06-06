@@ -2,13 +2,13 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import assets from "@/assets";
-import { booksData } from "./BooksData";
 import PageTitle from "@/components/ui/PageTitle";
+import { booksData } from "./booksData";
 
 const BooksPage = () => {
   return (
     <div className="">
-      <PageTitle title="Books by Abdullah Al-Ahsan" />
+      <PageTitle title="Books by Abdullah al-Ahsan" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 md:gap-6 gap-5">
         {booksData.map((book, index) => (

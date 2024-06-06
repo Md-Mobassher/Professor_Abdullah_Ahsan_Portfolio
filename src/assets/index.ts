@@ -8,6 +8,7 @@ const assets = {
     oic: require("@/assets/books/OIC The Organization of the Islamic Conference (An Introduction to An Islamic Political Institution).jpg"),
     muslimFestival: require("@/assets/books/Muslim Festivals (Holidays and Festivals).jpg"),
     colonialMuslim: require("@/assets/books/Elite-formation Under Colonial Rule Capable Administrators or Loyal Servants A General Survey of Colonial Rule in Muslim Countries.jpg"),
+    ummahOrNation: require("@/assets/books/ummah.png"),
   },
   icons: {
     email: require("@/assets/icons/email.png"),

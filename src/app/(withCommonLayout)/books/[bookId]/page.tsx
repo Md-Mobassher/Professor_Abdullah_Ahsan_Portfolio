@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ListItem from "@/components/ui/ListItem";
 import assets from "@/assets";
-import { booksData } from "../BooksData";
+import { booksData } from "../booksData";
 import PageTitle from "@/components/ui/PageTitle";
 
 type BookParams = {
@@ -67,18 +67,25 @@ const BookDetailsPage = ({ params }: BookParams) => {
               <ListItem key={index} item={item} />
             ))}
           <div className="flex gap-5 lg:mt-5 mt-4">
+            {book?.url && (
+              <Link href={book.url} target="_blank">
+                <Button className="text-white px-4 py-2 rounded bg-teal-400 hover:bg-teal-600 transition duration-300">
+                  View Book
+                </Button>
+              </Link>
+            )}
+            {book?.buy && (
+              <Link href={book.buy} target="_blank">
+                <Button className="text-white px-4 py-2 rounded bg-blue-400 hover:bg-blue-600 transition duration-300">
+                  Buy This Book
+                </Button>
+              </Link>
+            )}
             <Link href="/books">
               <Button className="text-white px-4 py-2 rounded bg-cyan-400 hover:bg-cyan-600 transition duration-300 ">
                 Back to Books
               </Button>
             </Link>
-            {book?.buy && (
-              <Link href={book.buy} target="_blank">
-                <Button className="text-white px-4 py-2 rounded bg-blue-400 hover:bg-blue-600 transition duration-300">
-                  Buy This Books
-                </Button>
-              </Link>
-            )}
           </div>
         </div>
       </div>

@@ -11,10 +11,10 @@ const About = () => {
         <div className="flex gap-10">
           <div>
             <h2 className="text-3xl font-bold mb-6 ">
-              About Abdullah Al-Ahsan
+              About Abdullah al-Ahsan
             </h2>
             <p>
-              Abdullah Al-Ahsan is a distinguished scholar and professor known
+              Abdullah al-Ahsan is a distinguished scholar and professor known
               for his extensive contributions to the fields of history,
               comparative civilization, and international relations. With a
               career spanning over three decades, he has made significant
@@ -24,7 +24,7 @@ const About = () => {
           <div className="w-[400px]">
             <Image
               src={ahsan}
-              alt="abdullah al-ahsan"
+              alt="Abdullah al-Ahsan"
               width={400}
               height={500}
             />
@@ -36,7 +36,7 @@ const About = () => {
         <div>
           <h2 className="text-2xl font-bold mb-4">Early Life and Education</h2>
           <p>
-            Abdullah Al-Ahsan was born in Bangladesh, and from a young age, he
+            Abdullah al-Ahsan was born in Bangladesh, and from a young age, he
             exhibited a keen interest in history and international affairs. He
             completed his Bachelors and Masters in Pakistan from University of
             Punjab and Quaid-i-Azam University in General Studies and History,
@@ -86,7 +86,7 @@ const About = () => {
         <div>
           <h2 className="text-2xl font-bold mb-4">Publications</h2>
           <p>
-            Abdullah Al-Ahsan has authored several influential books and
+            Abdullah al-Ahsan has authored several influential books and
             numerous articles. Some of his notable publications include:
           </p>
           <ul className="list-disc ml-6">
@@ -120,7 +120,7 @@ const About = () => {
             Personal Philosophy and Contributions
           </h2>
           <p>
-            Abdullah Al-Ahsan believes in the importance of cross-civilizational
+            Abdullah al-Ahsan believes in the importance of cross-civilizational
             dialogue and understanding. His work aims to bridge gaps between
             different cultural and religious groups, promoting peace and
             cooperation. Through his teachings and writings, he has made

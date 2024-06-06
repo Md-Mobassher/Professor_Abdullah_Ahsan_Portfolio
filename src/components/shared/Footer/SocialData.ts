@@ -4,7 +4,7 @@ export const socialData = [
   {
     title: "email",
     image: assets.icons.email,
-    link: "abdullah.ahsan2011@gmail.com",
+    link: "mailto:abdullah.ahsan2011@gmail.com",
   },
   {
     title: "linkedin",
@@ -14,7 +14,7 @@ export const socialData = [
   {
     title: "whatsapp",
     image: assets.icons.whatsapp,
-    link: "(609) 613-7802",
+    link: "https://wa.me/16096137802",
   },
   {
     title: "twitter",
