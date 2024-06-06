@@ -58,7 +58,7 @@ export const booksData = [
     url: "",
   },
   {
-    id: "The-History-of-Al-khalifah-Ar-Rashidah",
+    id: "The-History-of-Al-khalifah-Ar-Rashidah-Textbook",
     title: "The History of Al-Khilafa Ar-Rashidah Textbook",
     edition: "Unknown Binding",
     author: " Dr. Abdullah al-Ahsan (Author)",
@@ -81,8 +81,7 @@ export const booksData = [
   },
   {
     id: "Muslim-Festivals-(Holidays-and-Festivals)",
-    title:
-      "The Clash of Civilizations Thesis and Muslims: The Search for an Alternative Paradigm",
+    title: "Muslim Festivals (Holidays and Festivals)",
     edition: "Library Binding",
     author: "  Abdullah Al Ahsan (Author)",
     description:

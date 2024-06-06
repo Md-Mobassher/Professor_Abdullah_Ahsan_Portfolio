@@ -2,6 +2,7 @@ import Link from "next/link";
 import { articlesData } from "./articleData";
 import { Button } from "@/components/ui/button";
 import PageTitle from "@/components/ui/PageTitle";
+import Title from "@/components/ui/Title";
 
 const ArticlePages = () => {
   return (
@@ -15,9 +16,7 @@ const ArticlePages = () => {
           >
             <div>
               <div>
-                <h2 className="text-2xl text-cyan-500 font-semibold mb-2  ">
-                  {article.title}
-                </h2>
+                <Title title={article.title} />
               </div>
               <p>
                 <strong>Publication:</strong> {article.publication}

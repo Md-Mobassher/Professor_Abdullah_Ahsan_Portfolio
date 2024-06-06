@@ -8,6 +8,10 @@ export const navItems = [
     url: "/about",
   },
   {
+    title: "Experience",
+    url: "/experience",
+  },
+  {
     title: "Books",
     url: "/books",
   },
@@ -16,19 +20,15 @@ export const navItems = [
     url: "/articles",
   },
   {
-    title: "Audio and Video",
-    url: "/audio-video",
-  },
-  {
     title: "Bios",
     url: "/bios",
   },
   {
-    title: "Debates",
-    url: "/debates",
+    title: "Presentation",
+    url: "/presentation",
   },
   {
-    title: "Letters",
-    url: "/letters",
+    title: "CV",
+    url: "https://drive.google.com/file/d/1xm1WkCuBqrSsLSUobJ5mubsvzl7oWSi6/view?usp=sharing",
   },
 ];
