@@ -85,9 +85,9 @@ export const booksData = [
     buy: "https://www.amazon.com/Muslim-Festivals-Holidays-Abdullah-Ahsan/dp/0865929793/ref=sr_1_17?dib=eyJ2IjoiMSJ9.HXLcVnjb9FkqQcVF-euxO8ufqkPlGNhOdM2qntWAfNFTwta8COw_Adb9JWIIaoxT._dIV4RHSvP6QCfzQ1tIjoe9PNmI2Xja3n9h9B-iyLKw&dib_tag=se&qid=1717607185&refinements=p_27%3AAbdullah+Al+Ahsan&s=books&sr=1-17",
   },
   {
-    id: "Quranic-Guidance-for-Good-Governance:A-Contemporary-Perspective",
+    id: "Quranic-Guidance-for-Good-Governance-A-Contemporary-Perspective",
     title: "Qur'anic Guidance for Good Governance: A Contemporary Perspective",
-    edition: "Paperback – August 18, 2017",
+    edition: "Paperback - August 18, 2017",
     author: " Abdullah al-Ahsan (Editor), Stephen B. Young (Editor)",
     description: "",
     image: "",

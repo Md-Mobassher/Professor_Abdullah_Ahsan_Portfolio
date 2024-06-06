@@ -1,9 +1,10 @@
 import Image from "next/image";
-import { booksData } from "../BooksData";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ListItem from "@/components/ui/ListItem";
 import assets from "@/assets";
+import { booksData } from "../BooksData";
+import PageTitle from "@/components/ui/PageTitle";
 
 type BookParams = {
   params: {
@@ -19,7 +20,8 @@ const BookDetailsPage = ({ params }: BookParams) => {
   }
 
   return (
-    <div className=" lg:py-10 md:py-8 py-5">
+    <div className="">
+      <PageTitle title="Book Details" />
       <div className="flex flex-col lg:flex-row md:flex-row items-center lg:items-start lg:gap-10 gap-5 md:gap-8">
         <div className="lg:w-1/3 md:w-1/3 ">
           {book.image ? (
@@ -41,10 +43,10 @@ const BookDetailsPage = ({ params }: BookParams) => {
           )}
         </div>
         <div className="lg:ml-8 mt-6 lg:mt-0 lg:w-2/3 md:w-2/3">
-          <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold mb-4">
+          <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold mb-4 text-cyan-500">
             {book.title}{" "}
             {book?.edition && (
-              <span className="text-gray-500 lg:text-3xl md:text-2xl text-xl font-semibold">
+              <span className="text-cyan-300 lg:text-3xl md:text-2xl text-xl font-semibold">
                 {book.edition}
               </span>
             )}
@@ -52,7 +54,7 @@ const BookDetailsPage = ({ params }: BookParams) => {
           {book.author && (
             <p className="text-lg mb-5">
               by{" "}
-              <span className="text-gray-700 font-semibold text-md">
+              <span className="text-blue-400 font-semibold text-md">
                 {book.author}
               </span>
             </p>
@@ -66,7 +68,7 @@ const BookDetailsPage = ({ params }: BookParams) => {
             ))}
           <div className="flex gap-5 lg:mt-5 mt-4">
             <Link href="/books">
-              <Button className="text-white px-4 py-2 rounded hover:bg-gray-600 transition duration-300 ">
+              <Button className="text-white px-4 py-2 rounded bg-cyan-400 hover:bg-cyan-600 transition duration-300 ">
                 Back to Books
               </Button>
             </Link>

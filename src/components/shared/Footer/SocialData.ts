@@ -4,17 +4,17 @@ export const socialData = [
   {
     title: "email",
     image: assets.icons.email,
-    link: "https://dev-mobassher.web.app",
+    link: "abdullah.ahsan2011@gmail.com",
   },
   {
     title: "linkedin",
     image: assets.icons.linkedIn,
-    link: "https://dev-mobassher.web.app",
+    link: "https://www.linkedin.com/in/abdullah-ahsan-a53b246",
   },
   {
     title: "whatsapp",
     image: assets.icons.whatsapp,
-    link: "https://dev-mobassher.web.app",
+    link: "(609) 613-7802",
   },
   {
     title: "twitter",
