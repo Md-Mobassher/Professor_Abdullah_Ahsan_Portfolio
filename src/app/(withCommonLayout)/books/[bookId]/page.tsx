@@ -43,7 +43,7 @@ const BookDetailsPage = ({ params }: BookParams) => {
           )}
         </div>
         <div className="lg:ml-8 mt-6 lg:mt-0 lg:w-2/3 md:w-2/3">
-          <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold mb-4 text-cyan-500">
+          <h1 className="lg:text-3xl md:text-2xl text-xl font-bold mb-4 text-cyan-500">
             {book.title}{" "}
             {book?.edition && (
               <span className="text-cyan-300 lg:text-3xl md:text-2xl text-xl font-semibold">
@@ -66,7 +66,7 @@ const BookDetailsPage = ({ params }: BookParams) => {
             book.list.map((item, index) => (
               <ListItem key={index} item={item} />
             ))}
-          <div className="flex gap-5 lg:mt-5 mt-4">
+          <div className="flex flex-wrap lg:gap-5 gap-3 lg:mt-10 md:mt-8 mt-6">
             {book?.url && (
               <Link href={book.url} target="_blank">
                 <Button className="text-white px-4 py-2 rounded bg-teal-400 hover:bg-teal-600 transition duration-300">

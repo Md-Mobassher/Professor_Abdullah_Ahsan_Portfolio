@@ -41,7 +41,7 @@ const BooksPage = () => {
                 {book.description.slice(0, 140)}...
               </p>
               <Link href={`/books/${book?.id}`}>
-                <Button className="text-white px-4 py-2 rounded bg-cyan-400 hover:bg-cyan-600 transition duration-300 ">
+                <Button className="text-white px-4 py-2 rounded bg-cyan-400 hover:bg-cyan-600 transition duration-300 mt-2">
                   Book Details
                 </Button>
               </Link>

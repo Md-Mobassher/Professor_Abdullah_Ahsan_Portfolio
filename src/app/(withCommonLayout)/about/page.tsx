@@ -11,14 +11,14 @@ const About = () => {
     <div className="">
       <PageTitle title=" About Abdullah al-Ahsan" />
       <section className="pt-4 pb-8">
-        <div className="flex gap-10">
+        <div className="flex lg:flex-row md:flex-row flex-col-reverse lg:gap-10 md:gap-8 gap-5">
           <div>
             <div className="flex flex-wrap items-center gap-3">
               <Title title="Abdullah al-Ahsan ( Professor of Comparative Civilization )" />
               <p className="font-semibold text-xl"></p>
             </div>
 
-            <p>
+            <p className="text-justify">
               Abdullah al-Ahsan is a distinguished scholar and professor known
               for his extensive contributions to the fields of history,
               comparative civilization, and international relations. With a
@@ -26,7 +26,7 @@ const About = () => {
               impacts through his teaching, research, and published works.
             </p>
           </div>
-          <div className="w-[400px]">
+          <div className="w-[400px] mx-auto ">
             <Image
               src={ahsan}
               alt="Abdullah al-Ahsan"
@@ -41,7 +41,7 @@ const About = () => {
         <div>
           <Title title="Early Life and Education" />
 
-          <p>
+          <p className="text-justify">
             Abdullah al-Ahsan was born in Bangladesh, and from a young age, he
             exhibited a keen interest in history and international affairs. He
             completed his Bachelors and Masters in Pakistan from University of
@@ -77,7 +77,7 @@ const About = () => {
       <section className="py-8">
         <div>
           <Title title="Research Interests" />
-          <p>
+          <p className="text-justify">
             Professor Al-Ahsan&apos;s research interests include the
             relationship between Western and Islamic civilizations, governance
             structures within the Muslim world, and the effectiveness of
@@ -91,13 +91,13 @@ const About = () => {
       <section className="py-8 ">
         <div>
           <Title title="Publications" />
-          <p>
+          <p className="text-justify">
             Abdullah al-Ahsan has authored several influential books and
             numerous articles. Some of his notable publications include:
           </p>
           <div className="list-disc">
             <div className="mt-3 mb-5">
-              <strong>Books:</strong>
+              <strong className="mb-3">Books:</strong>
               {booksData.map((book) => (
                 <ListItem key={book.id} item={book.title} />
               ))}
@@ -113,7 +113,7 @@ const About = () => {
       <section className="py-8">
         <div>
           <Title title="Awards and Recognitions" />
-          <p>
+          <p className="text-justify">
             Professor Al-Ahsan has received numerous awards for his
             contributions to academia and his scholarly works. His achievements
             are recognized both within and beyond the academic community.
@@ -124,7 +124,7 @@ const About = () => {
       <section className="py-8 ">
         <div>
           <Title title="Personal Philosophy and Contributions" />
-          <p>
+          <p className="text-justify">
             Abdullah al-Ahsan believes in the importance of cross-civilizational
             dialogue and understanding. His work aims to bridge gaps between
             different cultural and religious groups, promoting peace and
