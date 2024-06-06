@@ -5,7 +5,7 @@ import PageTitle from "@/components/ui/PageTitle";
 
 const ArticlePages = () => {
   return (
-    <div className="pb-8">
+    <div className="">
       <PageTitle title="Articles" />
       <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5">
         {articlesData.map((article) => (

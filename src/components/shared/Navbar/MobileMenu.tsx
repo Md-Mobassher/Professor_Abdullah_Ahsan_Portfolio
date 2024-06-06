@@ -3,6 +3,7 @@
 import { PlusIcon, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { navItems } from "./navData";
 
 const navItem = (
   <>
@@ -86,7 +87,7 @@ const MobileMenu = () => {
           aria-expanded={isOpen ? "true" : "false"}
         >
           {isOpen ? (
-            <div className="p-1 border rounded-md hover:bg-gray-500 hover:text-white">
+            <div className="p-1 border border-cyan-500 rounded-md hover:bg-cyan-500 hover:text-white">
               <X className="size-8" />
             </div>
           ) : (
@@ -98,8 +99,18 @@ const MobileMenu = () => {
             </div>
           )}
           {isOpen && (
-            <div className="flex flex-col pt-5 w-full top-8 right-0 left-0 shadow-lg rounded-md absolute transition-all duration-500 z-50">
-              {navItem}
+            <div className=" mt-3 w-full top-8 right-0 left-0 shadow-lg rounded-lg absolute transition-all duration-500 z-50 bg-gray-300 border border-cyan-500">
+              <nav className="w-full flex flex-col rounded-lg">
+                {navItems.map((item, index) => (
+                  <Link
+                    key={index}
+                    href={item.url}
+                    className="lg:text-xl text-md font-semibold uppercase py-2 border-b  hover:text-white hover:bg-cyan-500 border-cyan-500 rounded-lg"
+                  >
+                    {item.title}
+                  </Link>
+                ))}
+              </nav>
             </div>
           )}
         </button>
