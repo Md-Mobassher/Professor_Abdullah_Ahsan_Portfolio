@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { navItems } from "./navData";
+import { navItemsData } from "./navItemsData";
 
 const DesktopMenu = () => {
   return (
     <div className="lg:flex md:flex flex-wrap hidden   text-center justify-center items rounded-lg">
       <nav className="flex flex-wrap">
-        {navItems.map((item, index) => (
+        {navItemsData.map((item, index) => (
           <Link
             key={index}
             href={item.url}

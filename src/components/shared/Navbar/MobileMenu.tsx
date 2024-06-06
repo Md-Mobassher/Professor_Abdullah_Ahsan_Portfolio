@@ -3,75 +3,7 @@
 import { PlusIcon, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { navItems } from "./navData";
-
-const navItem = (
-  <>
-    <div className="lg:hidden md:hidden flex flex-col bg-gray-300  text-center rounded-lg">
-      <Link
-        href="/"
-        className="lg:text-xl text-md font-semibold uppercase py-2 border-b border-gray-500  hover:text-white hover:bg-gray-500 rounded-t-lg"
-      >
-        Home
-      </Link>
-
-      <Link
-        href="/about"
-        className="lg:text-xl text-md font-semibold uppercase py-2 border-b border-gray-500  hover:text-white hover:bg-gray-500 "
-      >
-        ABOUT
-      </Link>
-
-      {/* <Link
-        href="/recent-update"
-        className="lg:text-xl text-md font-semibold uppercase py-2 border-b border-gray-500  hover:text-white hover:bg-gray-500 "
-      >
-        Recent Update
-      </Link> */}
-
-      <Link
-        href="/books"
-        className="lg:text-xl text-md font-semibold uppercase py-2 border-b border-gray-500  hover:text-white hover:bg-gray-500 "
-      >
-        Books
-      </Link>
-
-      <Link
-        href="/articles"
-        className="lg:text-xl text-md font-semibold uppercase py-2 border-b border-gray-500  hover:text-white hover:bg-gray-500 "
-      >
-        ARTICLES
-      </Link>
-
-      <Link
-        href="/audio-video"
-        className="lg:text-xl text-md font-semibold uppercase py-2 border-b border-gray-500  hover:text-white hover:bg-gray-500 "
-      >
-        AUDIO AND VIDEO
-      </Link>
-
-      <Link
-        href="/bios"
-        className="lg:text-xl text-md font-semibold uppercase py-2 border-b border-gray-500  hover:text-white hover:bg-gray-500 "
-      >
-        BIOS
-      </Link>
-
-      <Link
-        href="/debates"
-        className="lg:text-xl text-md font-semibold uppercase py-2 border-b border-gray-500  hover:text-white hover:bg-gray-500 "
-      >
-        DEBATES
-      </Link>
-      <Link
-        href="/letters"
-        className="lg:text-xl text-md font-semibold uppercase py-2 rounded-b-lg hover:text-white hover:bg-gray-500 "
-      >
-        LETTERS
-      </Link>
-    </div>
-  </>
-);
+import { navItemsData } from "./navItemsData";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -101,7 +33,7 @@ const MobileMenu = () => {
           {isOpen && (
             <div className=" mt-3 w-full top-8 right-0 left-0 shadow-lg rounded-lg absolute transition-all duration-500 z-50 bg-gray-300 border border-cyan-500">
               <nav className="w-full flex flex-col rounded-lg">
-                {navItems.map((item, index) => (
+                {navItemsData.map((item, index) => (
                   <Link
                     key={index}
                     href={item.url}

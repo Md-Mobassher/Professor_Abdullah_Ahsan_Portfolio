@@ -4,6 +4,7 @@ import MobileMenu from "@/components/shared/Navbar/MobileMenu";
 import Footer from "@/components/shared/Footer/Footer";
 import HomeNavbar from "@/components/shared/Navbar/HomeNavbar";
 import ahsan from "@/assets/images/Abdullah-Ahsan.png";
+import { navItemsData } from "@/components/shared/Navbar/navItemsData";
 
 const HomePageComponent = () => {
   return (
@@ -15,30 +16,15 @@ const HomePageComponent = () => {
 
       <div className="flex justify-center items-center lg:mt-14 mt-10 gap-10 ">
         <div className="flex-1 hidden lg:flex md:flex flex-col items-end">
-          <Link
-            href="/books"
-            className="lg:text-xl text-md font-semibold uppercase mb-3 hidden lg:flex md:flex"
-          >
-            Books
-          </Link>
-          <Link
-            href="/articles"
-            className="lg:text-xl text-md font-semibold uppercase mb-3"
-          >
-            ARTICLES
-          </Link>
-          <Link
-            href="/audio-video"
-            className="lg:text-xl text-md font-semibold uppercase mb-3"
-          >
-            AUDIO AND VIDEO
-          </Link>
-          <Link
-            href="/bios"
-            className="lg:text-xl text-md font-semibold uppercase mb-3"
-          >
-            BIOS
-          </Link>
+          {navItemsData.slice(1, 5).map((item, index) => (
+            <Link
+              key={index}
+              href={item.url}
+              className="lg:text-xl text-md font-semibold uppercase py-2 px-4 hover:text-white hover:bg-cyan-500 rounded-lg"
+            >
+              {item.title}
+            </Link>
+          ))}
         </div>
 
         <div className="flex-1">
@@ -64,30 +50,15 @@ const HomePageComponent = () => {
         </div>
 
         <div className="flex-1 flex-col hidden lg:flex md:flex">
-          <Link
-            href="/talks"
-            className="lg:text-xl text-md font-semibold uppercase mb-3"
-          >
-            TALKS
-          </Link>
-          <Link
-            href="/debates"
-            className="lg:text-xl text-md font-semibold uppercase mb-3"
-          >
-            DEBATES
-          </Link>
-          <Link
-            href="/letters"
-            className="lg:text-xl text-md font-semibold uppercase mb-3"
-          >
-            LETTERS
-          </Link>
-          <Link
-            href="/about"
-            className="lg:text-xl text-md font-semibold uppercase mb-3"
-          >
-            ABOUT
-          </Link>
+          {navItemsData.slice(5, 10).map((item, index) => (
+            <Link
+              key={index}
+              href={item.url}
+              className="lg:text-xl text-md font-semibold uppercase py-2 px-4 hover:text-white hover:bg-cyan-500 rounded-lg"
+            >
+              {item.title}
+            </Link>
+          ))}
         </div>
       </div>
 
