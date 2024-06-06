@@ -7,10 +7,10 @@ const Footer = () => {
   return (
     <div className=" lg:mt-16 md:mt-14 mt-10 mb-8">
       <Separator className="bg-black " />
-      <div className="flex flex-wrap lg:justify-between md:justify-between justify-center items-center py-3">
+      <div className="flex flex-wrap lg:justify-between md:justify-between justify-center  lg:gap-10 gap-2 items-center py-3">
         <div>
           <Link href="/">
-            <h1 className="lg:text-2xl md:text-2xl text-xl font-bold my-3 font-serif">
+            <h1 className="lg:text-2xl md:text-2xl text-xl font-bold my-3 font-serif hover:text-cyan-500">
               Professor Abdullah al-Ahsan
             </h1>
           </Link>
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <p className="text-center">
+        <p className="text-center text-md">
           Design & Developed By{" "}
           <Link
             href="https://dev-mobassher.web.app"

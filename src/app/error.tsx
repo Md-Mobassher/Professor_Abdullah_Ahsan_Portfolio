@@ -1,5 +1,7 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+
 const ErrorPage = ({
   error,
   reset,
@@ -15,12 +17,12 @@ const ErrorPage = ({
       <p className="text-4xl bg-red-500 text-white p-5 w-[50%] mx-auto rounded-xl mt-2">
         {error.message}
       </p>
-      <button
+      <Button
         onClick={() => reset()}
-        className="btn btn-error btn-outline mt-5"
+        className="bg-cyan-400 hover:bg-cyan-600 hover:text-white mt-10"
       >
         Try Again
-      </button>
+      </Button>
     </div>
   );
 };

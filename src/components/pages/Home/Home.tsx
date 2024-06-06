@@ -11,8 +11,6 @@ const HomePageComponent = () => {
     <div className="max-w-4xl mx-auto px-4 py-2">
       {/* header */}
       <HomeNavbar />
-      {/* mobile menu */}
-      <MobileMenu />
 
       <div className="flex justify-center items-center lg:mt-14 mt-10 gap-10 ">
         <div className="flex-1 hidden lg:flex md:flex flex-col items-end">
@@ -49,7 +47,7 @@ const HomePageComponent = () => {
           </div>
         </div>
 
-        <div className="flex-1 flex-col hidden lg:flex md:flex">
+        <div className="flex-1 flex-col hidden lg:flex md:flex items-start">
           {navItemsData.slice(5, 10).map((item, index) => (
             <Link
               key={index}

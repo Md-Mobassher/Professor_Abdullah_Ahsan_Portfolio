@@ -9,6 +9,7 @@
 - **Next.js**: React framework for building server-side rendered and static web applications.
 - **TypeScript**: Typed superset of JavaScript for enhanced developer productivity and code maintainability.
 - **Tailwind CSS**: Utility-first CSS framework for building custom designs with ease.
+- **Shadcn**: A collection of re-usable components.
 
 ## Getting Started
 
