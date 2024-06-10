@@ -1,14 +1,19 @@
 const assets = {
   books: {
-    quranicGuidance: require("@/assets/books/quranic-guiidence.jpg"),
-    historyOfKhalifa: require("@/assets/books/history-of-khilafa.jpg"),
-    secretOfLivingHappy: require("@/assets/books/secret-of-living-happy.jpg"),
-    khalifaTexbook: require("@/assets/books/The History of Al-Khilafa Ar-Rashidah Textbook.jpg"),
-    historyOfKhalifaRashida: require("@/assets/books/THE HISTORY OF AL-KHILAFAH AR-RASHIDAH.jpg"),
-    oic: require("@/assets/books/oic.jpg"),
-    muslimFestival: require("@/assets/books/Muslim Festivals (Holidays and Festivals).jpg"),
-    colonialMuslim: require("@/assets/books/Elite-formation Under Colonial Rule Capable Administrators or Loyal Servants A General Survey of Colonial Rule in Muslim Countries.jpg"),
+    oicCover: require("@/assets/books/oic.jpeg"),
+    oicBackCover: require("@/assets/books/oic-back.jpeg"),
     ummahOrNation: require("@/assets/books/ummah.png"),
+    khalifaChildrenCover: require("@/assets/books/khilafa-cover-children.png"),
+    khalifaChildrenBackCover: require("@/assets/books/khilafa-back-children.png"),
+    guidanceCover: require("@/assets/books/guidance-cover.jpg"),
+    guidanceBackCover: require("@/assets/books/guidance-back.jpg"),
+    quranicGuidanceCover: require("@/assets/books/quranic-guidance-cover.webp"),
+    classOfCivilisationCover: require("@/assets/books/the-clash-of-civiliazation.jpg"),
+    muslimFestival: require("@/assets/books/muslim-festival.jpg"),
+    colonialMuslim: require("@/assets/books/Elite-formation Under Colonial Rule Capable Administrators or Loyal Servants A General Survey of Colonial Rule in Muslim Countries.jpg"),
+    // historyOfKhalifaRashida: require("@/assets/books/THE HISTORY OF AL-KHILAFAH AR-RASHIDAH.jpg"),
+
+    // secretOfLivingHappy: require("@/assets/books/secret-of-living-happy.jpg"),
   },
   icons: {
     email: require("@/assets/icons/email.png"),

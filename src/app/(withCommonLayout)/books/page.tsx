@@ -14,13 +14,13 @@ const BooksPage = () => {
         {booksData.map((book, index) => (
           <div
             key={index}
-            className="relative group border border-gray-300 hover:border-gray-500 hover:shadow-gray-500 hover:shadow-lg rounded-lg shadow-md  overflow-hidden w-full lg:h-[500px] md:h-[450px] h-[450px] flex"
+            className="relative group rounded-lg overflow-hidden w-full lg:h-[500px] md:h-[450px] h-[450px] flex"
           >
-            {book.image ? (
+            {book.image.front ? (
               <Image
-                src={book.image}
+                src={book.image.front}
                 alt={book.title}
-                className=" rounded-lg transition duration-300 ease-in-out transform group-hover:blur-sm flex mx-auto"
+                className=" rounded-lg transition duration-300 ease-in-out transform group-hover:blur-sm  border border-gray-400 hover:border-gray-500 hover:shadow-gray-500 hover:shadow-lg shadow-md "
                 width={400}
                 height={400}
               />
@@ -28,12 +28,13 @@ const BooksPage = () => {
               <Image
                 src={assets.image.noImage}
                 alt="no image"
-                className=" rounded-lg transition duration-300 ease-in-out transform group-hover:blur-sm flex mx-auto"
+                className=" rounded-lg transition duration-300 ease-in-out transform group-hover:blur-sm  border border-gray-400 hover:border-gray-500 hover:shadow-gray-500 hover:shadow-lg shadow-md "
                 width={400}
                 height={400}
               />
             )}
-            <div className="absolute inset-x-0 bottom-0 bg-slate-50 bg-opacity-60 rounded-b-lg flex flex-col items-center justify-center transform translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out p-5 border-t border-t-gray-300">
+
+            <div className="absolute inset-x-0 bottom-0 bg-slate-50 bg-opacity-60 rounded-b-lg flex flex-col items-center justify-center transform translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out p-5 border border-gray-400">
               <h3 className="text-xl font-semibold text-black mb-2 text-justify">
                 {book.title}
               </h3>

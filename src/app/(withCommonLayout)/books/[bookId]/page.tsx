@@ -24,19 +24,28 @@ const BookDetailsPage = ({ params }: BookParams) => {
       <PageTitle title="Book Details" />
       <div className="flex flex-col lg:flex-row md:flex-row items-center lg:items-start lg:gap-10 gap-5 md:gap-8">
         <div className="lg:w-1/3 md:w-1/3 ">
-          {book.image ? (
+          {book.image.front ? (
             <Image
-              src={book.image}
+              src={book.image.front}
               alt={book.title}
-              className="rounded-lg shadow-xl border border-gray-300"
+              className=" rounded-lg transition duration-300 ease-in-out transform flex mx-auto border border-gray-400 hover:border-gray-500 hover:shadow-gray-500 hover:shadow-lg  shadow-md "
               width={400}
-              height={500}
+              height={400}
             />
           ) : (
             <Image
               src={assets.image.noImage}
               alt="no image"
-              className="rounded-lg shadow-xl border border-gray-300"
+              className=" rounded-lg transition duration-300 ease-in-out transform flex mx-auto border border-gray-400 hover:border-gray-500 hover:shadow-gray-500 hover:shadow-lg  shadow-md "
+              width={400}
+              height={400}
+            />
+          )}
+          {book.image.back && (
+            <Image
+              src={book.image.back}
+              alt={book.title}
+              className=" rounded-lg transition duration-300 ease-in-out transform flex mx-auto mt-5 border border-gray-400 hover:border-gray-500 hover:shadow-gray-500 hover:shadow-lg  shadow-md "
               width={400}
               height={400}
             />
@@ -62,10 +71,10 @@ const BookDetailsPage = ({ params }: BookParams) => {
           <p className="lg:text-lg text-md text-justify text-gray-700 mb-4">
             {book.description}
           </p>
-          {book.list &&
+          {/* {book.list &&
             book.list.map((item, index) => (
               <ListItem key={index} item={item} />
-            ))}
+            ))} */}
           <div className="flex flex-wrap lg:gap-5 gap-3 lg:mt-10 md:mt-8 mt-6">
             {book?.url && (
               <Link href={book.url} target="_blank">
@@ -77,7 +86,7 @@ const BookDetailsPage = ({ params }: BookParams) => {
             {book?.buy && (
               <Link href={book.buy} target="_blank">
                 <Button className="text-white px-4 py-2 rounded bg-blue-400 hover:bg-blue-600 transition duration-300">
-                  Buy This Book
+                  Buy Online
                 </Button>
               </Link>
             )}
