@@ -5,6 +5,7 @@ import { areaOfExpertises, teachingPositions } from "./aboutData";
 import PageTitle from "@/components/ui/PageTitle";
 import Title from "@/components/ui/Title";
 import { booksData } from "../books/booksData";
+import Education from "./Education";
 
 const About = () => {
   return (
@@ -26,7 +27,7 @@ const About = () => {
               impacts through his teaching, research, and published works.
             </p>
           </div>
-          <div className="w-[400px] mx-auto ">
+          <div className="lg:w-[500px] w-full mx-auto flex justify-center">
             <Image
               src={ahsan}
               alt="Abdullah al-Ahsan"
@@ -37,22 +38,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-8 ">
-        <div>
-          <Title title="Early Life and Education" />
-
-          <p className="text-justify">
-            Abdullah al-Ahsan was born in Bangladesh, and from a young age, he
-            exhibited a keen interest in history and international affairs. He
-            completed his Bachelors and Masters in Pakistan from University of
-            Punjab and Quaid-i-Azam University in General Studies and History,
-            respectively. He continued his studies at McGill University,
-            Montreal, Canada, doing a Masters in Islamic Studies, and finally
-            gained his Ph.D in History from the University of Michigan, Ann
-            Arbor, Michigan, United States.
-          </p>
-        </div>
-      </section>
+      <Education />
 
       <section className="py-8">
         <Title title="Academic Career" />

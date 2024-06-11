@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import MobileMenu from "@/components/shared/Navbar/MobileMenu";
 import Footer from "@/components/shared/Footer/Footer";
 import HomeNavbar from "@/components/shared/Navbar/HomeNavbar";
 import ahsan from "@/assets/images/Abdullah-Ahsan.png";
@@ -8,11 +7,11 @@ import { navItemsData } from "@/components/shared/Navbar/navItemsData";
 
 const HomePageComponent = () => {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-2">
+    <div className="max-w-4xl  mx-auto px-4 mt-2">
       {/* header */}
       <HomeNavbar />
 
-      <div className="flex justify-center items-center lg:mt-14 mt-10 gap-10 ">
+      <div className="flex justify-center items-center lg:mt-12 mt-10 gap-10 ">
         <div className="flex-1 hidden lg:flex md:flex flex-col items-end">
           {navItemsData.slice(1, 4).map((item, index) => (
             <Link
@@ -27,14 +26,6 @@ const HomePageComponent = () => {
 
         <div className="flex-1">
           <div className="flex  flex-col justify-center items-center">
-            {/* <div className="hidden lg:flex md:flex">
-              <Link
-                href="/recent-update"
-                className="lg:text-xl text-md font-semibold uppercase mb-3"
-              >
-                Recent Update
-              </Link>
-            </div> */}
             <div>
               <Image
                 src={ahsan}

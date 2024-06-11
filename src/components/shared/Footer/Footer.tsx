@@ -5,7 +5,7 @@ import { socialData } from "./SocialData";
 
 const Footer = () => {
   return (
-    <div className=" lg:mt-16 md:mt-14 mt-10 mb-8">
+    <div className=" lg:mt-14 md:mt-12 mt-10 mb-5">
       <Separator className="bg-black " />
       <div className="flex flex-wrap lg:justify-between md:justify-between justify-center  lg:gap-10 gap-2 items-center py-3">
         <div>
