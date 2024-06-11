@@ -14,7 +14,7 @@ const HomePageComponent = () => {
 
       <div className="flex justify-center items-center lg:mt-14 mt-10 gap-10 ">
         <div className="flex-1 hidden lg:flex md:flex flex-col items-end">
-          {navItemsData.slice(1, 5).map((item, index) => (
+          {navItemsData.slice(1, 4).map((item, index) => (
             <Link
               key={index}
               href={item.url}
@@ -48,7 +48,7 @@ const HomePageComponent = () => {
         </div>
 
         <div className="flex-1 flex-col hidden lg:flex md:flex items-start">
-          {navItemsData.slice(5, 10).map((item, index) => (
+          {navItemsData.slice(4, 10).map((item, index) => (
             <Link
               key={index}
               href={item.url}

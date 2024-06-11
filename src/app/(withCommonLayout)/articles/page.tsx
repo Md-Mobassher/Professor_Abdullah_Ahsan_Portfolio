@@ -9,15 +9,21 @@ const ArticlePages = () => {
     <div className="">
       <PageTitle title="Articles" />
       <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5">
-        {articlesData.map((article) => (
+        {articlesData.map((article, index) => (
           <div
-            key={article.id}
+            key={index}
             className="lg:p-6 md:p-5 p-4 border rounded-lg shadow-lg hover:shadow-gray-500 hover:shadow-lg border-gray-300 hover:border-gray-500 hover:text-black flex flex-col justify-between"
           >
             <div>
               <div>
                 <Title title={article.title} />
               </div>
+              <p className="mb-2">
+                by
+                <strong className="text-blue-400 ml-2">
+                  Abdullah al-Ahsan{" "}
+                </strong>
+              </p>
               <p>
                 <strong>Publication:</strong> {article.publication}
               </p>
@@ -30,40 +36,13 @@ const ArticlePages = () => {
                   <strong>Pages:</strong> {article.pages}
                 </p>
               )}
-              {article.volume && (
-                <p>
-                  <strong>Volume:</strong> {article.volume}
-                </p>
-              )}
-              {article.issue && (
-                <p>
-                  <strong>Issue:</strong> {article.issue}
-                </p>
-              )}
-
-              {article.doi && (
-                <p>
-                  <strong>DOI:</strong> {article.doi}
-                </p>
-              )}
-              {article.language && (
-                <p>
-                  <strong>Language:</strong> {article.language}
-                </p>
-              )}
-              {article.abstract && (
-                <p>
-                  <strong>Abstract:</strong> {article.abstract}
-                </p>
-              )}
-              {article.keywords.length > 0 && (
-                <p>
-                  <strong>Keywords:</strong> {article.keywords.join(", ")}
-                </p>
-              )}
             </div>
             <div className="flex gap-5 lg:mt-5 mt-4">
-              <Link href={`/articles/${article.id}`}>
+              <Link
+                href={`/articles/${encodeURIComponent(
+                  article.title.split(" ").join("-")
+                )}`}
+              >
                 <Button className="text-white px-4 py-2 rounded bg-cyan-400 hover:bg-cyan-600 transition duration-300 ">
                   Details
                 </Button>

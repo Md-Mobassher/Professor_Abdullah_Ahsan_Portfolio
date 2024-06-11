@@ -10,10 +10,11 @@ type TArticleParams = {
 };
 
 const ArticleDetailsPage = ({ params }: TArticleParams) => {
-  const article = articlesData.find((a) => a.id === Number(params.articleId));
-
+  const article = articlesData.find(
+    (a) => encodeURIComponent(a.title.split(" ").join("-")) === params.articleId
+  );
   if (!article) {
-    return <p>article not found</p>;
+    return <p>Article not found</p>;
   }
 
   return (
@@ -21,7 +22,7 @@ const ArticleDetailsPage = ({ params }: TArticleParams) => {
       <PageTitle title="Article Details" />
 
       <div
-        key={article.id}
+        key={article.title}
         className="lg:p-6 md:p-5 p-4 border rounded-lg shadow-lg hover:shadow-gray-500 hover:shadow-lg border-gray-300 hover:border-gray-500 hover:text-black flex flex-col justify-between"
       >
         <div>
@@ -30,6 +31,10 @@ const ArticleDetailsPage = ({ params }: TArticleParams) => {
               {article.title}
             </h2>
           </div>
+          <p className="mb-2">
+            by
+            <strong className="text-blue-400 ml-2">Abdullah al-Ahsan </strong>
+          </p>
           <p>
             <strong>Publication:</strong> {article.publication}
           </p>

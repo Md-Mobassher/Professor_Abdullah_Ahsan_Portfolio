@@ -133,8 +133,7 @@ export const professionalExperienceData = [
     ],
   },
   {
-    institution:
-      "Dawah Academy, International Islamic University, Islamabad, Pakistan",
+    institution: "Dawah Academy, International Islamic University",
     location: "Islamabad, Pakistan",
     title: "Assistant Professor",
     start_date: "May 1988",
@@ -147,7 +146,7 @@ export const professionalExperienceData = [
     courses_taught: [],
   },
   {
-    institution: "International Institute of Islamic Thought, VA, USA",
+    institution: "International Institute of Islamic Thought",
     location: "VA, USA",
     title: "Research Fellow",
     start_date: "June 1985",
@@ -158,7 +157,7 @@ export const professionalExperienceData = [
     courses_taught: [],
   },
   {
-    institution: "The University of Michigan, MI",
+    institution: "The University of Michigan",
     location: "MI, USA",
     title: "H. B. Earhart Fellow",
     start_date: "June 1984",
@@ -177,7 +176,7 @@ export const professionalExperienceData = [
   },
   {
     institution: "Pakistan Broadcasting Corporation",
-    location: "N/A",
+    location: "Pakistan",
     title: "Translator and Writer",
     start_date: "February 1974",
     end_date: "August 1978",

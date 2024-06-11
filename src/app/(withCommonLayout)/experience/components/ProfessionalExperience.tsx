@@ -19,7 +19,7 @@ const ProfessionalExperience = () => {
             <div className="">
               <p className="lg:text-lg text-md text-gray-600">
                 {experience.institution && (
-                  <span>{experience.institution},</span>
+                  <span className="mr-2">{experience.institution},</span>
                 )}
                 {experience.location && <span>{experience.location}</span>}
               </p>
