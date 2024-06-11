@@ -24,7 +24,8 @@ export const professionalExperienceData = [
   {
     institution: "International Islamic University Malaysia",
     location: "Kuala Lumpur, Malaysia",
-    title: "Editor and Professor, Department of History and Civilization",
+    title:
+      "Editor, Intellectual Discourse. (SCOPUS journal) and Professor at the Department of History and Civilization.",
     start_date: "September 2016",
     end_date: "June 2017",
     responsibilities: [
@@ -44,27 +45,7 @@ export const professionalExperienceData = [
       "Islam and the West",
     ],
   },
-  {
-    institution: "International Islamic University Malaysia",
-    location: "Kuala Lumpur, Malaysia",
-    title: "Professor, Department of History and Civilization",
-    start_date: "July 2015",
-    end_date: "September 2016",
-    responsibilities: [
-      "Prepared and delivered lectures to undergraduate and graduate students.",
-      "Established clear objectives for all lessons, units, and projects, ensuring compliance with curriculum guidelines.",
-      "Administered and graded tests and assignments to evaluate students’ progress.",
-      "Encouraged students to explore learning opportunities and to persevere with challenging tasks to overcome adversity and excel at the highest levels.",
-    ],
-    courses_taught: [
-      "Introduction to History",
-      "Modern Arab World",
-      "Rise and Fall of Civilizations",
-      "Islam in the Modern World",
-      "Orientalism",
-      "Islam and the West",
-    ],
-  },
+
   {
     institution: "International Islamic University Malaysia",
     location: "Kuala Lumpur, Malaysia",
@@ -88,6 +69,120 @@ export const professionalExperienceData = [
       "History of Islamic Economic Thought and Civilization",
       "Zionism",
     ],
+  },
+  {
+    institution: "",
+    location: "",
+    title: "Professor, Department of History and Civilization",
+    start_date: "June 1999",
+    end_date: "June 2009",
+    responsibilities: [],
+    courses_taught: [
+      "Introduction to Western Civilization",
+      "Rise and Fall of Civilizations",
+      "Modern History of Europe",
+      "Colonialism in the Muslim World at undergraduate level",
+      "Rise and Fall of Civilizations",
+      "Islam in the Modern World",
+      "Orientalism at graduate level",
+    ],
+  },
+
+  {
+    institution: "",
+    location: "",
+    title: "Associate Professor, Department of History and Civilization",
+    start_date: "July 1996",
+    end_date: "June 1999",
+    responsibilities: [],
+    courses_taught: [],
+  },
+  {
+    institution: "International Islamic University Malaysia Press",
+    location: "",
+    title: "Director",
+    start_date: "July 1994",
+    end_date: "June 1996",
+    responsibilities: [
+      "Supervised the university’s publications.",
+      "Taught courses in the Department of History and Civilization.",
+    ],
+    courses_taught: [],
+  },
+  {
+    institution: "Department of History and Civilization",
+    location: "",
+    title: "Associate Professor",
+    start_date: "October 1992",
+    end_date: "June 1994",
+    responsibilities: [],
+    courses_taught: [],
+  },
+  {
+    institution: "",
+    location: "",
+    title: "Assistant Professor, Department of History and Civilization",
+    start_date: "July 1990",
+    end_date: "September 1992",
+    responsibilities: [],
+    courses_taught: [
+      "Colonialism in the Muslim World",
+      "Muslim Nations in Contemporary History",
+      "Nationalism and the Muslim World",
+      "Modern History of Europe",
+    ],
+  },
+  {
+    institution:
+      "Dawah Academy, International Islamic University, Islamabad, Pakistan",
+    location: "Islamabad, Pakistan",
+    title: "Assistant Professor",
+    start_date: "May 1988",
+    end_date: "June 1990",
+    responsibilities: [
+      "Conducted research on Muslim minorities.",
+      "Edited the Academy’s news magazine, Dawah Highlights.",
+      "Delivered lectures on contemporary Muslim issues in the Academy’s training programs.",
+    ],
+    courses_taught: [],
+  },
+  {
+    institution: "International Institute of Islamic Thought, VA, USA",
+    location: "VA, USA",
+    title: "Research Fellow",
+    start_date: "June 1985",
+    end_date: "May 1988",
+    responsibilities: [
+      "Conducted research on Islamic thought and civilization.",
+    ],
+    courses_taught: [],
+  },
+  {
+    institution: "The University of Michigan, MI",
+    location: "MI, USA",
+    title: "H. B. Earhart Fellow",
+    start_date: "June 1984",
+    end_date: "June 1985",
+    responsibilities: [],
+    courses_taught: [],
+  },
+  {
+    institution: "McGill University, Montreal, Canada",
+    location: "Montreal, Canada",
+    title: "Research Fellow",
+    start_date: "September 1978",
+    end_date: "June 1984",
+    responsibilities: [],
+    courses_taught: [],
+  },
+  {
+    institution: "Pakistan Broadcasting Corporation",
+    location: "N/A",
+    title: "Translator and Writer",
+    start_date: "February 1974",
+    end_date: "August 1978",
+    responsibilities: [],
+    courses_taught: [],
   },
 ];
 
@@ -140,26 +235,5 @@ export const affiliationData = [
   {
     organization: "Just World International",
     role: "Vice President",
-  },
-];
-
-export const languageData = [
-  {
-    language: "English",
-  },
-  {
-    language: "Bengali",
-  },
-  {
-    language: "Hindi",
-  },
-  {
-    language: "Urdu",
-  },
-  {
-    language: "Arabic",
-  },
-  {
-    language: "French",
   },
 ];

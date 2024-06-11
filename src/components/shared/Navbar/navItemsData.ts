@@ -19,10 +19,7 @@ export const navItemsData = [
     title: "Articles",
     url: "/articles",
   },
-  {
-    title: "Bios",
-    url: "/bios",
-  },
+
   {
     title: "Presentation",
     url: "/presentation",

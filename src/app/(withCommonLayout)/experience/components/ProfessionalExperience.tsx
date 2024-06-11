@@ -2,6 +2,8 @@ import PageTitle from "@/components/ui/PageTitle";
 import Title from "@/components/ui/Title";
 import ListItem from "@/components/ui/ListItem";
 import { professionalExperienceData } from "./experienceData";
+import { space } from "postcss/lib/list";
+import { Span } from "next/dist/trace";
 
 const ProfessionalExperience = () => {
   return (
@@ -16,28 +18,41 @@ const ProfessionalExperience = () => {
             <Title title={experience.title} />
             <div className="">
               <p className="lg:text-lg text-md text-gray-600">
-                {experience.institution}, {experience.location}
+                {experience.institution && (
+                  <span>{experience.institution},</span>
+                )}
+                {experience.location && <span>{experience.location}</span>}
               </p>
               <p className="lg:text-lg text-md text-gray-600">
                 {experience.start_date} - {experience.end_date}
               </p>
             </div>
-            <h3 className="text-xl font-semibold lg:mt-7 md:mt-6 mt-5 text-cyan-400">
-              Responsibilities:
-            </h3>
-            <div className="mt-2">
-              {experience.responsibilities.map((responsibility, i) => (
-                <ListItem key={i} item={responsibility} />
-              ))}
-            </div>
-            <h3 className="text-xl font-semibold lg:mt-7 md:mt-6 mt-5 text-cyan-400">
-              Courses Taught:
-            </h3>
-            <ul className="mt-2">
-              {experience.courses_taught.map((course, i) => (
-                <ListItem key={i} item={course} />
-              ))}
-            </ul>
+
+            {experience.responsibilities.length > 0 && (
+              <>
+                <h3 className="text-xl font-semibold lg:mt-7 md:mt-6 mt-5 text-cyan-400">
+                  Responsibilities:
+                </h3>
+                <div className="mt-2">
+                  {experience.responsibilities.map((responsibility, i) => (
+                    <ListItem key={i} item={responsibility} />
+                  ))}
+                </div>
+              </>
+            )}
+
+            {experience.courses_taught.length > 0 && (
+              <>
+                <h3 className="text-xl font-semibold lg:mt-7 md:mt-6 mt-5 text-cyan-400">
+                  Courses Taught:
+                </h3>
+                <div className="mt-2">
+                  {experience.courses_taught.map((course, i) => (
+                    <ListItem key={i} item={course} />
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         ))}
       </div>
