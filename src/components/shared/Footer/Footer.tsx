@@ -11,7 +11,7 @@ const Footer = () => {
         <div>
           <Link href="/">
             <h1 className="lg:text-2xl md:text-2xl text-xl font-bold my-3 font-serif hover:text-cyan-500">
-              Professor Abdullah al-Ahsan
+              Abdullah al-Ahsan
             </h1>
           </Link>
         </div>

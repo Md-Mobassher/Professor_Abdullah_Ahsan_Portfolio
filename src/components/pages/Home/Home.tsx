@@ -11,7 +11,7 @@ const HomePageComponent = () => {
       {/* header */}
       <HomeNavbar />
 
-      <div className="flex justify-center items-center lg:mt-12 mt-10 gap-10 ">
+      <div className="flex justify-center items-center lg:mt-16 md:mt-14 mt-10 gap-10 ">
         <div className="flex-1 hidden lg:flex md:flex flex-col items-end">
           {navItemsData.slice(1, 4).map((item, index) => (
             <Link

@@ -4,8 +4,8 @@ import { Separator } from "@/components/ui/separator";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Professor Abdullah al-Ahsan Website",
-  description: "Professor Abdullah al-Ahsan Website",
+  title: "Abdullah al-Ahsan Website",
+  description: "Abdullah al-Ahsan Website",
 };
 
 export default function CommonLayout({
