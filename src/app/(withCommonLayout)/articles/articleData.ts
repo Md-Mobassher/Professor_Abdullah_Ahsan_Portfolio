@@ -32,13 +32,13 @@ export const articlesData = [
   },
   {
     title:
-      "The Coronavirus and Geo-Politics: Trump’s Xenophobia and Weapons of the Weak",
-    publication: "Juan Cole Blog",
+      "Rise of Hindutva ideology in India: An accident or a natural development?",
+    publication: "Global Village Space",
     editor: "",
     publisher: "",
-    publication_date: "5 February 2020",
+    publication_date: "14 February 2022",
     pages: "",
-    url: "https://www.juancole.com/2020/05/coronavirus-xenophobia-weak.html",
+    url: "https://www.globalvillagespace.com/rise-of-hindutva-ideology-in-india-an-accident-or-natural-development",
     volume: "",
     issue: "",
     doi: "",
@@ -62,6 +62,7 @@ export const articlesData = [
     abstract: "",
     keywords: [],
   },
+
   {
     title: "Post Coronavirus World: Could We Expect a Better Domain?",
     publication: "International Journal of the Asian Philosophical Association",
@@ -72,6 +73,22 @@ export const articlesData = [
     url: "",
     volume: "14",
     issue: "2",
+    doi: "",
+    language: "English",
+    abstract: "",
+    keywords: [],
+  },
+  {
+    title:
+      "The Coronavirus and Geo-Politics: Trump’s Xenophobia and Weapons of the Weak",
+    publication: "Juan Cole Blog",
+    editor: "",
+    publisher: "",
+    publication_date: "5 February 2020",
+    pages: "",
+    url: "https://www.juancole.com/2020/05/coronavirus-xenophobia-weak.html",
+    volume: "",
+    issue: "",
     doi: "",
     language: "English",
     abstract: "",

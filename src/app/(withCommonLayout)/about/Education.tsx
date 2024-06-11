@@ -1,6 +1,5 @@
 import Title from "@/components/ui/Title";
 import { educations } from "./aboutData";
-import { Divide } from "lucide-react";
 import Link from "next/link";
 import ListItem from "@/components/ui/ListItem";
 

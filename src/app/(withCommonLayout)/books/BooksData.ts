@@ -92,15 +92,4 @@ export const booksData = [
     buy: "https://www.amazon.com/Elite-formation-Under-Colonial-Rule-Administrators/dp/9694081882/ref=sr_1_19?dib=eyJ2IjoiMSJ9.HXLcVnjb9FkqQcVF-euxO8ufqkPlGNhOdM2qntWAfNFTwta8COw_Adb9JWIIaoxT._dIV4RHSvP6QCfzQ1tIjoe9PNmI2Xja3n9h9B-iyLKw&dib_tag=se&qid=1717607185&refinements=p_27%3AAbdullah+Al+Ahsan&s=books&sr=1-19",
     url: "",
   },
-  {
-    id: "Muslim-Festivals-(Holidays-and-Festivals)",
-    title: "Muslim Festivals (Holidays and Festivals)",
-    edition: "Library Binding",
-    author: "  Abdullah Al Ahsan (Author)",
-    description:
-      "Muslim Festivals (Holidays and Festivals) by Abdullah al-Ahsan is an insightful guide that explores the rich tapestry of Islamic holidays and festivals celebrated by Muslims around the world. The book delves into the historical, religious, and cultural significance of major Islamic festivities such as Eid al-Fitr, Eid al-Adha, and the month of Ramadan. Al-Ahsan provides detailed descriptions of the customs, rituals, and traditions associated with these occasions, highlighting their spiritual importance and the values they promote, such as charity, gratitude, and community bonding. Through this book, readers gain a deeper understanding of the diverse ways in which Muslim communities observe and celebrate these special times. Al-Ahsan's comprehensive approach also covers regional variations and unique local practices, offering a global perspective on Islamic celebrations. This book is an invaluable resource for anyone seeking to learn more about Muslim cultural practices and the profound meanings behind these cherished festivals.",
-    image: { front: assets.books.muslimFestival },
-    buy: "https://www.amazon.com/Muslim-Festivals-Holidays-Abdullah-Ahsan/dp/0865929793/ref=sr_1_17?dib=eyJ2IjoiMSJ9.HXLcVnjb9FkqQcVF-euxO8ufqkPlGNhOdM2qntWAfNFTwta8COw_Adb9JWIIaoxT._dIV4RHSvP6QCfzQ1tIjoe9PNmI2Xja3n9h9B-iyLKw&dib_tag=se&qid=1717607185&refinements=p_27%3AAbdullah+Al+Ahsan&s=books&sr=1-17",
-    url: "",
-  },
 ];
