@@ -1,5 +1,5 @@
 import PageTitle from "@/components/ui/PageTitle";
-import { articlesData } from "../articleData";
+import { articlesData } from "../components/articleData";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
