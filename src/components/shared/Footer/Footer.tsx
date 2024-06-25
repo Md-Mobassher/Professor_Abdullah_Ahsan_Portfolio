@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="flex flex-wrap lg:justify-between md:justify-between justify-center  lg:gap-10 gap-2 items-center py-3">
         <div>
           <Link href="/">
-            <h1 className="lg:text-2xl md:text-2xl text-xl font-bold my-3 font-serif hover:text-cyan-500">
+            <h1 className="lg:text-2xl md:text-2xl text-xl font-bold my-3 hover:text-cyan-500">
               Abdullah al-Ahsan
             </h1>
           </Link>

@@ -6,7 +6,7 @@ const HomeNavbar = () => {
   return (
     <div className="text-center">
       <Link href="/">
-        <h1 className="lg:text-5xl md:text-4xl text-3xl font-bold my-3 text-center font-serif hover:text-cyan-500">
+        <h1 className="lg:text-5xl md:text-4xl text-3xl font-bold my-3 text-center hover:text-cyan-500">
           Abdullah al-Ahsan
         </h1>
       </Link>

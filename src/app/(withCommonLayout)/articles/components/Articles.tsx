@@ -2,47 +2,124 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { articlesData } from "./articleData";
 import Title from "@/components/ui/Title";
 import { TArticle } from "@/types";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Input } from "@/components/ui/input";
+import { space } from "postcss/lib/list";
 
 const Articles = () => {
-  const articlesName: string[] = Object.keys(articlesData);
-  const [selectedArticles, setSelectedArticles] = useState(articlesName[0]);
-  const selectedArticle: TArticle[] = (articlesData as any)[selectedArticles];
+  const [articles] = useState<TArticle[]>(articlesData);
+  const [selectedCategory, setSelectedCategory] = useState<
+    string | undefined
+  >();
+  const [search, setSearch] = useState<string>("");
+
+  const getFilteredArticles = () => {
+    let article;
+
+    if (!selectedCategory) {
+      article = articles;
+    }
+    if (!search) {
+      article = articles;
+    }
+
+    if (selectedCategory) {
+      article = articles.filter(
+        (item: TArticle) => item.category === selectedCategory
+      );
+    }
+    if (search) {
+      article = articles.filter((item: TArticle) =>
+        item.title.toLowerCase().includes(search)
+      );
+    }
+
+    return article;
+  };
+
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSearch(event.target.value);
+  };
+
+  const uniqueCategory = Array.from(
+    new Set(articles.flatMap((article) => article.category))
+  );
 
   return (
     <>
-      <div className="w-full lg:mb-10 md:mb-8 mb-6">
-        <ul className="flex flex-wrap items-center justify-center  lg:gap-5 md:gap-4 gap-3">
-          {articlesName.map((name) => (
-            <li
-              onClick={() => setSelectedArticles(name)}
-              className={
-                name === selectedArticles
-                  ? "border border-cyan-500 text-md py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition duration-500 lg:px-7 md:px-5 px-4 uppercase cursor-pointer"
-                  : "border border-cyan-500 text-md py-2 bg-white  hover:bg-cyan-600 text-cyan-600 hover:text-white rounded-lg transition duration-500 lg:px-7 md:px-5 px-4 uppercase cursor-pointer"
-              }
-              key={name}
-            >
-              {name === "academic" && (
-                <button className="uppercase font-semibold">
-                  Academic Articles & Book Chapters
-                </button>
-              )}
-              {name === "oped" && (
-                <button className="uppercase font-semibold">
-                  Magazine Articles & Op-eds
-                </button>
-              )}
-            </li>
-          ))}
-        </ul>
+      <div className="flex justify-between flex-wrap items-center  lg:mb-10 md:mb-8 mb-5 gap-3">
+        {/* filter button */}
+        <div className="flex gap-1">
+          <Button
+            onClick={() => setSelectedCategory(undefined)}
+            className="border border-cyan-500 text-md py-3 bg-cyan-500 hover:bg-cyan-700 text-white rounded-md transition duration-500 lg:px-6 md:px-5 px-3 uppercase cursor-pointer"
+          >
+            All
+          </Button>
+          <Select onValueChange={setSelectedCategory} defaultValue="">
+            <SelectTrigger className="lg:w-[180px] md:w-[170px] w-[140px] py-3  text-md hover:bg-cyan-500 bg-white text-cyan-600 border-cyan-500 hover:text-white rounded-md transition duration-500 lg:px-6 md:px-5 pl-3 pr-1 uppercase cursor-pointer text-center">
+              <SelectValue className="" placeholder="Category" />
+            </SelectTrigger>
+            <SelectContent className="w-[200px] ">
+              <SelectGroup>
+                {uniqueCategory.map((cat) => (
+                  <SelectItem
+                    key={cat}
+                    value={cat}
+                    className="py-3 m-0 text-md hover:bg-cyan-500 bg-white text-cyan-600 hover:text-white rounded-md transition duration-300 lg:px-6 md:px-5 pl-4 uppercase cursor-pointer"
+                  >
+                    {cat}
+                  </SelectItem>
+                ))}
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+        </div>
+
+        <div className="hidden md:flex">
+          <h4 className="text-lg font-semibold">
+            Total:{" "}
+            <span className="text-cyan-500">
+              {getFilteredArticles()?.length || 0}
+            </span>{" "}
+            Article Found
+          </h4>
+        </div>
+
+        {/* Search */}
+        <div className="lg:w-[180px] md:w-[170px] w-[120px] ">
+          <Input
+            type="text"
+            className="border-cyan-500 text-center"
+            onChange={handleInputChange}
+            placeholder="Search Article"
+          />
+        </div>
+      </div>
+
+      <div className="flex md:hidden justify-center mb-5">
+        <h4 className="text-md font-semibold">
+          Total:{" "}
+          <span className="text-cyan-500">
+            {getFilteredArticles()?.length || 0}
+          </span>{" "}
+          Article Found
+        </h4>
       </div>
 
       <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5">
-        {selectedArticle.map((article, index) => (
+        {getFilteredArticles()?.map((article, index) => (
           <div
             key={index}
             className="lg:p-6 md:p-5 p-4 border rounded-lg shadow-lg hover:shadow-gray-500 hover:shadow-lg border-gray-300 hover:border-gray-500 hover:text-black flex flex-col justify-between"
@@ -53,7 +130,7 @@ const Articles = () => {
               </div>
               <p className="mb-2">
                 by
-                <strong className="text-blue-400 ml-2">
+                <strong className="text-blue-500 ml-2">
                   Abdullah al-Ahsan{" "}
                 </strong>
               </p>
@@ -70,13 +147,13 @@ const Articles = () => {
                 </p>
               )}
             </div>
-            <div className="flex gap-5 lg:mt-5 mt-4">
+            <div className="flex lg:gap-5 md:gap-4 gap-4  lg:mt-5 mt-4">
               <Link
-                href={`/articles/${selectedArticles}/${encodeURIComponent(
+                href={`/articles/${article.category}/${encodeURIComponent(
                   article.title.split(" ").join("-")
                 )}`}
               >
-                <Button className="text-white px-4 py-2 rounded bg-cyan-400 hover:bg-cyan-600 transition duration-300 ">
+                <Button className="text-white px-4 py-2 rounded bg-cyan-500 hover:bg-cyan-700 transition duration-300 ">
                   Details
                 </Button>
               </Link>
@@ -86,7 +163,7 @@ const Articles = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button className="text-white px-4 py-2 rounded bg-blue-400 hover:bg-blue-600 transition duration-300">
+                  <Button className="text-white px-4 py-2 rounded bg-blue-500 hover:bg-blue-700 transition duration-300">
                     View Article
                   </Button>
                 </Link>

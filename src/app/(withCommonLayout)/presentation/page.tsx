@@ -6,7 +6,7 @@ import Title from "@/components/ui/Title";
 const PresentationPage = () => {
   return (
     <div>
-      <PageTitle title="Presentation by Abdullah al-Ahsan" />
+      <PageTitle title="Presentation" />
       <div className="grid-cols-1 gap-5 grid">
         {presentationsData.map((presentation, index) => (
           <div

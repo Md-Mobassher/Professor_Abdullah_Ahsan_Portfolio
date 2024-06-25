@@ -12,4 +12,5 @@ export type TArticle = {
   language: string;
   abstract: string;
   keywords: string[];
+  category: string;
 };

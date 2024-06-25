@@ -4,22 +4,15 @@ import { Button } from "@/components/ui/button";
 import { TArticle } from "@/types";
 
 type TArticleDetailsParams = {
-  category: string;
   articleTitle: string;
 };
 
-const ArticleDetails = ({ category, articleTitle }: TArticleDetailsParams) => {
+const ArticleDetails = ({ articleTitle }: TArticleDetailsParams) => {
   let article: TArticle | undefined;
 
-  if (category === "academic") {
-    article = articlesData?.academic?.find(
-      (a) => encodeURIComponent(a.title.split(" ").join("-")) === articleTitle
-    );
-  } else if (category === "oped") {
-    article = articlesData?.oped?.find(
-      (a) => encodeURIComponent(a.title.split(" ").join("-")) === articleTitle
-    );
-  }
+  article = articlesData.find(
+    (art) => encodeURIComponent(art.title.split(" ").join("-")) === articleTitle
+  );
 
   if (!article) {
     return (
@@ -44,19 +37,23 @@ const ArticleDetails = ({ category, articleTitle }: TArticleDetailsParams) => {
       >
         <div>
           <div>
-            <h2 className="text-2xl text-cyan-500 font-semibold mb-2  ">
+            <h2 className="lg:text-2xl md:text-2xl text-xl text-cyan-500 font-semibold mb-2  ">
               {article?.title}
             </h2>
           </div>
           <p className="mb-2">
             by
-            <strong className="text-blue-400 ml-2">Abdullah al-Ahsan </strong>
+            <strong className="text-blue-500 ml-2">Abdullah al-Ahsan </strong>
           </p>
           <p>
             <strong>Publication:</strong> {article?.publication}
           </p>
           <p>
             <strong>Publication Date:</strong> {article?.publication_date}
+          </p>
+          <p>
+            <strong>Category:</strong>
+            <span className="uppercase"> {article?.category}</span>
           </p>
 
           {article?.pages && (
@@ -95,16 +92,16 @@ const ArticleDetails = ({ category, articleTitle }: TArticleDetailsParams) => {
             </p>
           )}
         </div>
-        <div className="flex gap-5 lg:mt-5 mt-4">
+        <div className="flex lg:gap-5 md:gap-4 gap-3 lg:mt-5 mt-4">
           {article?.url && (
             <Link href={article?.url} target="_blank" rel="noopener noreferrer">
-              <Button className="text-white px-4 py-2 rounded bg-blue-400 hover:bg-blue-600 transition duration-300">
+              <Button className="text-white px-4 py-2 rounded bg-blue-500 hover:bg-blue-700 transition duration-300">
                 View Article
               </Button>
             </Link>
           )}
           <Link href={`/articles`}>
-            <Button className="text-white px-4 py-2 rounded bg-cyan-400 hover:bg-cyan-600 transition duration-300 ">
+            <Button className="text-white px-4 py-2 rounded bg-cyan-500 hover:bg-cyan-700 transition duration-300 ">
               Back to Articles
             </Button>
           </Link>

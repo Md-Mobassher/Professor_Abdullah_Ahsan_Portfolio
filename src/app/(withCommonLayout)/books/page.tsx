@@ -8,7 +8,7 @@ import { booksData } from "./booksData";
 const BooksPage = () => {
   return (
     <div className="">
-      <PageTitle title="Books by Abdullah al-Ahsan" />
+      <PageTitle title="Books" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 md:gap-6 gap-5">
         {booksData.map((book, index) => (
