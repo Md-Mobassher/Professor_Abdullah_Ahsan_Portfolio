@@ -11,12 +11,11 @@ const Articles = () => {
   const articlesName: string[] = Object.keys(articlesData);
   const [selectedArticles, setSelectedArticles] = useState(articlesName[0]);
   const selectedArticle: TArticle[] = (articlesData as any)[selectedArticles];
-  //   console.log(selectedArticle);
 
   return (
     <>
       <div className="w-full lg:mb-10 md:mb-8 mb-6">
-        <ul className="flex items-center justify-center  lg:gap-5 md:gap-4 gap-3">
+        <ul className="flex flex-wrap items-center justify-center  lg:gap-5 md:gap-4 gap-3">
           {articlesName.map((name) => (
             <li
               onClick={() => setSelectedArticles(name)}
@@ -27,7 +26,16 @@ const Articles = () => {
               }
               key={name}
             >
-              {name}
+              {name === "academic" && (
+                <button className="uppercase font-semibold">
+                  Academic Articles & Book Chapters
+                </button>
+              )}
+              {name === "oped" && (
+                <button className="uppercase font-semibold">
+                  Magazine Articles & Op-eds
+                </button>
+              )}
             </li>
           ))}
         </ul>
@@ -64,7 +72,7 @@ const Articles = () => {
             </div>
             <div className="flex gap-5 lg:mt-5 mt-4">
               <Link
-                href={`/articles/${encodeURIComponent(
+                href={`/articles/${selectedArticles}/${encodeURIComponent(
                   article.title.split(" ").join("-")
                 )}`}
               >

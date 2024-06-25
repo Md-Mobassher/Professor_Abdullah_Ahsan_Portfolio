@@ -1,5 +1,5 @@
 export const articlesData = {
-  Academic: [
+  academic: [
     {
       title:
         "Is the One-Sided US Response to the Gaza Crisis a Sign of our Civilizational Decline?",
@@ -17,7 +17,7 @@ export const articlesData = {
       keywords: [],
     },
   ],
-  Oped: [
+  oped: [
     {
       title:
         "Is the One-Sided US Response to the Gaza Crisis a Sign of our Civilizational Decline?",
