@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import ListItem from "@/components/ui/ListItem";
 import assets from "@/assets";
-import { booksData } from "../booksData";
+import { booksData } from "../components/booksData";
 import PageTitle from "@/components/ui/PageTitle";
 
 type BookParams = {
@@ -13,7 +12,7 @@ type BookParams = {
 };
 
 const BookDetailsPage = ({ params }: BookParams) => {
-  const book = booksData.find((b) => b.id === params.bookId);
+  const book = booksData?.find((b) => b.id === params.bookId);
 
   if (!book) {
     return <p>Book not found</p>;

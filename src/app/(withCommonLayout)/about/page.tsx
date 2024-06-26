@@ -4,7 +4,7 @@ import ListItem from "@/components/ui/ListItem";
 import { areaOfExpertises, teachingPositions } from "./aboutData";
 import PageTitle from "@/components/ui/PageTitle";
 import Title from "@/components/ui/Title";
-import { booksData } from "../books/booksData";
+import { booksData } from "../books/components/booksData";
 import Education from "./Education";
 
 const About = () => {
