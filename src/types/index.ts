@@ -14,3 +14,11 @@ export type TArticle = {
   keywords: string[];
   category: string;
 };
+
+export type TPresentation = {
+  title: string;
+  link: string;
+  location: string;
+  year: number | string;
+  category: string;
+};

@@ -1,11 +1,9 @@
 "use client";
 
+import Title from "@/components/ui/Title";
+import { presentationsData } from "./presentationData";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ChangeEvent, useState } from "react";
-import { articlesData } from "./articleData";
-import Title from "@/components/ui/Title";
-import { TArticle } from "@/types";
 import {
   Select,
   SelectContent,
@@ -14,37 +12,39 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { ChangeEvent, useState } from "react";
+import { TPresentation } from "@/types";
 import { Input } from "@/components/ui/input";
 
-const Articles = () => {
-  const [articles] = useState<TArticle[]>(articlesData);
+const Presentations = () => {
+  const [presentations] = useState<TPresentation[]>(presentationsData);
   const [selectedCategory, setSelectedCategory] = useState<
     string | undefined
   >();
   const [search, setSearch] = useState<string>("");
 
-  const getFilteredArticles = () => {
-    let article;
+  const getFilteredPresentations = () => {
+    let presentation;
 
     if (!selectedCategory) {
-      article = articles;
+      presentation = presentations;
     }
     if (!search) {
-      article = articles;
+      presentation = presentations;
     }
 
     if (selectedCategory) {
-      article = articles.filter(
-        (item: TArticle) => item.category === selectedCategory
+      presentation = presentations.filter(
+        (item: TPresentation) => item.category === selectedCategory
       );
     }
     if (search) {
-      article = articles.filter((item: TArticle) =>
+      presentation = presentations.filter((item: TPresentation) =>
         item.title.toLowerCase().includes(search.toLowerCase())
       );
     }
 
-    return article;
+    return presentation;
   };
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -52,7 +52,7 @@ const Articles = () => {
   };
 
   const uniqueCategory = Array.from(
-    new Set(articles.flatMap((article) => article.category))
+    new Set(presentations.flatMap((presentaion) => presentaion.category))
   );
 
   return (
@@ -90,9 +90,9 @@ const Articles = () => {
           <h4 className="text-lg font-semibold">
             Total:{" "}
             <span className="text-cyan-500 px-1">
-              {getFilteredArticles()?.length || 0}
+              {getFilteredPresentations()?.length || 0}
             </span>{" "}
-            Articles Found
+            Presentaion Found
           </h4>
         </div>
 
@@ -102,7 +102,7 @@ const Articles = () => {
             type="text"
             className="border-cyan-500 text-center"
             onChange={handleInputChange}
-            placeholder="Search Article"
+            placeholder="Search Presentation"
           />
         </div>
       </div>
@@ -111,63 +111,40 @@ const Articles = () => {
         <h4 className="text-md font-semibold">
           Total:{" "}
           <span className="text-cyan-500 px-1">
-            {getFilteredArticles()?.length || 0}
+            {getFilteredPresentations()?.length || 0}
           </span>{" "}
-          Articles Found
+          Presentaion Found
         </h4>
       </div>
 
+      {/* show presentaions */}
       <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5">
-        {getFilteredArticles()?.map((article, index) => (
+        {getFilteredPresentations()?.map((presentation, index) => (
           <div
             key={index}
-            className="lg:p-6 md:p-5 p-4 border rounded-lg shadow-lg hover:shadow-gray-500 hover:shadow-lg border-gray-300 hover:border-gray-500 hover:text-black flex flex-col justify-between"
+            className="lg:p-8 md:p-6 p-4 border rounded-lg shadow-lg hover:shadow-gray-500 hover:shadow-lg border-gray-300 hover:border-gray-500 hover:text-black flex flex-col justify-between"
           >
-            <div>
-              <div>
-                <Title title={article.title} />
-              </div>
-              <p className="mb-2">
-                by
-                <strong className="text-blue-500 ml-2">
-                  Abdullah al-Ahsan{" "}
-                </strong>
-              </p>
-              <p>
-                <strong>Publication:</strong> {article.publication}
-              </p>
-              <p>
-                <strong>Publication Date:</strong> {article.publication_date}
-              </p>
-
-              {article.pages && (
-                <p>
-                  <strong>Pages:</strong> {article.pages}
-                </p>
-              )}
-            </div>
-            <div className="flex lg:gap-5 md:gap-4 gap-4  lg:mt-5 mt-4">
+            <Title title={presentation?.title} />
+            {presentation?.link && (
               <Link
-                href={`/articles/${article.category}/${encodeURIComponent(
-                  article.title.split(" ").join("-")
-                )}`}
+                href={presentation?.link}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Button className="text-white px-4 py-2 rounded bg-cyan-500 hover:bg-cyan-700 transition duration-300 ">
-                  Details
-                </Button>
+                <strong>Link:</strong>{" "}
+                <span className="text-blue-400 hover:text-blue-500 cursor-pointer">
+                  {presentation?.link}
+                </span>
               </Link>
-              {article.url && (
-                <Link
-                  href={article.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button className="text-white px-4 py-2 rounded bg-blue-500 hover:bg-blue-700 transition duration-300">
-                    View Article
-                  </Button>
-                </Link>
-              )}
-            </div>
+            )}
+
+            {presentation?.location && (
+              <p className="mt-2">
+                <strong>Location: </strong>
+                {presentation?.location}{" "}
+                {presentation?.year && <span>in {presentation?.year}</span>}
+              </p>
+            )}
           </div>
         ))}
       </div>
@@ -175,4 +152,4 @@ const Articles = () => {
   );
 };
 
-export default Articles;
+export default Presentations;

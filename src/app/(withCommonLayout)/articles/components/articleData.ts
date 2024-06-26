@@ -446,7 +446,7 @@ export const articlesData = [
     keywords: [],
     category: "Academic",
   },
-  // oped start
+  // Op-eds start
   {
     title:
       "Is the One-Sided US Response to the Gaza Crisis a Sign of our Civilizational Decline?",
@@ -462,7 +462,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
   {
     title: "How are leaders in the Muslim World reacting to the Gaza Conflict?",
@@ -478,7 +478,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
   {
     title:
@@ -495,7 +495,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
   {
     title:
@@ -512,7 +512,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
 
   {
@@ -529,7 +529,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
   {
     title:
@@ -546,7 +546,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
   {
     title:
@@ -563,7 +563,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
   {
     title:
@@ -580,7 +580,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
 
   {
@@ -597,7 +597,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
   {
     title: "What is History?",
@@ -613,7 +613,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
 
   {
@@ -630,7 +630,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
 
   {
@@ -648,7 +648,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
   {
     title:
@@ -665,7 +665,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
   {
     title: "Islam and Modernity: A Malaysian Perspective",
@@ -681,7 +681,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
   {
     title: "Religious Pluralism: Secularism, Islam and Liberal Democracy",
@@ -697,7 +697,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
 
   {
@@ -714,7 +714,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
   {
     title: "Islamic Civilization in the 21st Century: The OIC’s Role",
@@ -730,7 +730,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
   {
     title: "Secularism and Its Discontents: The Malaysian Dilemma",
@@ -746,7 +746,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
   {
     title: "Unity or Fragmentation? The OIC’s Role in the Muslim World",
@@ -762,7 +762,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
 
   {
@@ -779,7 +779,7 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
   {
     title: "Human Rights and the Muslim World",
@@ -795,6 +795,6 @@ export const articlesData = [
     language: "English",
     abstract: "",
     keywords: [],
-    category: "Oped",
+    category: "Op-eds",
   },
 ];
