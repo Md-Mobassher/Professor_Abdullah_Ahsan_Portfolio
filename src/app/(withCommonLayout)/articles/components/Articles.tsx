@@ -15,7 +15,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
-import { space } from "postcss/lib/list";
 
 const Articles = () => {
   const [articles] = useState<TArticle[]>(articlesData);
@@ -41,7 +40,7 @@ const Articles = () => {
     }
     if (search) {
       article = articles.filter((item: TArticle) =>
-        item.title.toLowerCase().includes(search)
+        item.title.toLowerCase().includes(search.toLowerCase())
       );
     }
 
@@ -93,7 +92,7 @@ const Articles = () => {
             <span className="text-cyan-500">
               {getFilteredArticles()?.length || 0}
             </span>{" "}
-            Article Found
+            Articles Found
           </h4>
         </div>
 
@@ -114,7 +113,7 @@ const Articles = () => {
           <span className="text-cyan-500">
             {getFilteredArticles()?.length || 0}
           </span>{" "}
-          Article Found
+          Articles Found
         </h4>
       </div>
 
